@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Ferdinan Alfarubby (Dinan) - Siswa MTsN 01 Payakumbuh</title>
+
+    <style>
+        :root {
+            --biru-primer: #0284c7;
+            --biru-tua: #0369a1;
+            --biru-navy: #0c4a6e;
+            --biru-terang: #38bdf8;
+            --biru-muda: #e0f2fe;
+            --biru-latar: #f0f9ff;
+            --aksen-kuning: #f59e0b;
+            --kuning-cerah: #fbbf24;
+            --hijau-sukses: #10b981;
+            --putih: #ffffff;
+            --teks-gelap: #0f172a;
+            --teks-body: #334155;
+            --teks-muted: #64748b;
+            --border-halus: #e2e8f0;
+            --bayangan-kartu: 0 10px 25px -5px rgba(2, 132, 199, 0.12), 0 8px 10px -6px rgba(2, 132, 199, 0.08);
+            --bayangan-hover: 0 20px 35px -10px rgba(2, 132, 199, 0.25);
+            --radius-xl: 22px;
+            --radius-lg: 16px;
+            --radius-md: 10px;
+            --transisi: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(180deg, #f0f9ff 0%, #e0f2fe 100%);
+            color: var(--teks-body);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* HEADER HERO */
+        header {
+            background: linear-gradient(135deg, #0284c7 0%, #0369a1 40%, #075985 100%);
+            color: var(--putih);
+            padding: 55px 20px 45px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 6px 25px rgba(2, 132, 199, 0.35);
+        }
+
+        .bubble {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .bubble-1 { width: 180px; height: 180px; top: -50px; left: 3%; }
+        .bubble-2 { width: 110px; height: 110px; bottom: -20px; right: 5%; }
+        .bubble-3 { width: 70px; height: 70px; top: 25px; right: 20%; }
+        .bubble-4 { width: 50px; height: 50px; bottom: 30px; left: 22%; }
+
+        .hero-profile {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 18px;
+        }
+
+        .avatar-ring {
+            width: 118px;
+            height: 118px;
+            margin: 0 auto;
+            border-radius: 50%;
+            padding: 4px;
+            background: linear-gradient(135deg, var(--kuning-cerah) 0%, #f59e0b 50%, var(--biru-terang) 100%);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+            transition: var(--transisi);
+            cursor: pointer;
+        }
+
+        .avatar-ring:hover {
+            transform: scale(1.06) rotate(4deg);
+        }
+
+        .avatar-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+            background: var(--kuning-cerah);
+            display: block;
+            border: 3px solid var(--putih);
+        }
+
+        .badge-status {
+            position: absolute;
+            bottom: 4px;
+            right: -6px;
+            background: var(--hijau-sukses);
+            color: white;
+            font-size: 11px;
+            font-weight: 800;
+            padding: 4px 12px;
+            border-radius: 20px;
+            border: 2px solid white;
+            white-space: nowrap;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .badge-pulse {
+            width: 8px;
+            height: 8px;
+            background: white;
+            border-radius: 50%;
+            display: inline-block;
+            animation: pulse 1.8s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(1.3); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        header h1 {
+            font-size: 40px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 6px;
+            text-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        }
+
+        header .sub-nama {
+            font-size: 21px;
+            font-weight: 600;
+            color: #bae6fd;
+            margin-bottom: 12px;
+        }
+
+        header .chips-header {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .header-chip {
+            background: rgba(255, 255, 255, 0.18);
+            backdrop-filter: blur(5px);
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #f0fdf4;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+        }
+
+        .hero-action-btns {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .btn-hero {
+            padding: 10px 22px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transisi);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-hero-primary {
+            background: var(--kuning-cerah);
+            color: #78350f;
+            box-shadow: 0 4px 15px rgba(251, 191, 36, 0.4);
+        }
+
+        .btn-hero-primary:hover {
+            background: #f59e0b;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .btn-hero-secondary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .btn-hero-secondary:hover {
+            background: rgba(255, 255, 255, 0.35);
+            transform: translateY(-2px);
+        }
+
+        /* NAVIGASI STICKY */
+        nav {
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(10px);
+            padding: 12px 18px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        nav a {
+            color: var(--biru-navy);
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 14px;
+            transition: var(--transisi);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        nav a:hover {
+            background: var(--biru-muda);
+            color: var(--biru-primer);
+            transform: translateY(-2px);
+        }
+
+        /* MAIN WRAPPER */
+        main {
+            max-width: 1040px;
+            margin: 0 auto;
+            padding: 35px 20px 70px;
+        }
+
+        section {
+            background: var(--putih);
+            margin-bottom: 35px;
+            padding: 35px;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--bayangan-kartu);
+            border: 1px solid rgba(2, 132, 199, 0.08);
+            transition: var(--transisi);
+        }
+
+        section:hover {
+            box-shadow: var(--bayangan-hover);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 24px;
+            padding-bottom: 14px;
+            border-bottom: 2px solid var(--biru-muda);
+        }
+
+        .section-icon {
+            font-size: 26px;
+            background: linear-gradient(135deg, var(--biru-muda) 0%, #bae6fd 100%);
+            width: 52px;
+            height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--radius-lg);
+            color: var(--biru-tua);
+            box-shadow: 0 4px 10px rgba(2, 132, 199, 0.12);
+        }
+
+        h2 {
+            color: var(--biru-navy);
+            font-size: 26px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        /* TENTANG SAYA SECTION WITH PHOTO */
+        .tentang-wrapper {
+            display: grid;
+            grid-template-columns: 360px 1fr;
+            gap: 32px;
+            align-items: start;
+        }
+
+        .foto-showcase-card {
+            background: #ffffff;
+            border: 3px solid #bae6fd;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: 0 12px 30px rgba(2, 132, 199, 0.18);
+            position: relative;
+            transition: var(--transisi);
+        }
+
+        .foto-showcase-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--biru-primer);
+            box-shadow: 0 20px 40px rgba(2, 132, 199, 0.28);
+        }
+
+        .foto-img-container {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            background: #0284c7;
+        }
+
+        .foto-dinan-img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            object-position: center 30%;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .foto-img-container:hover .foto-dinan-img {
+            transform: scale(1.05);
+        }
+
+        .foto-overlay-tag {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background: rgba(12, 74, 110, 0.85);
+            backdrop-filter: blur(6px);
+            color: #ffffff;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 5px 12px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.3);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .foto-zoom-hint {
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+            background: rgba(0, 0, 0, 0.65);
+            backdrop-filter: blur(4px);
+            color: white;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 5px 10px;
+            border-radius: 20px;
+            opacity: 0.9;
+        }
+
+        .foto-caption-box {
+            padding: 16px;
+            background: linear-gradient(180deg, #ffffff 0%, var(--biru-latar) 100%);
+            border-top: 2px solid #e0f2fe;
+            text-align: center;
+        }
+
+        .foto-caption-title {
+            font-size: 16px;
+            font-weight: 800;
+            color: var(--biru-navy);
+            margin-bottom: 4px;
+        }
+
+        .foto-caption-desc {
+            font-size: 13px;
+            color: var(--teks-muted);
+            line-height: 1.4;
+        }
+
+        /* TENTANG DETAIL CONTENT */
+        .tentang-intro-text {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--teks-gelap);
+            margin-bottom: 22px;
+        }
+
+        .tentang-intro-text b {
+            color: var(--biru-primer);
+        }
+
+        .info-pribadi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 14px;
+            margin-bottom: 22px;
+        }
+
+        .info-card-item {
+            background: var(--biru-latar);
+            border: 1px solid #bae6fd;
+            border-radius: var(--radius-md);
+            padding: 14px 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: var(--transisi);
+        }
+
+        .info-card-item:hover {
+            background: #ffffff;
+            border-color: var(--biru-primer);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(2, 132, 199, 0.1);
+        }
+
+        .info-icon-badge {
+            font-size: 24px;
+            background: var(--biru-muda);
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            flex-shrink: 0;
+        }
+
+        .info-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--teks-muted);
+            letter-spacing: 0.5px;
+        }
+
+        .info-val {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--biru-navy);
+        }
+
+        .karakter-container {
+            background: #fffdf5;
+            border: 2px dashed #fcd34d;
+            padding: 18px 20px;
+            border-radius: var(--radius-md);
+        }
+
+        .karakter-title {
+            font-size: 13px;
+            font-weight: 800;
+            color: #b45309;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .badge-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .karakter-badge {
+            background: linear-gradient(135deg, #ffffff 0%, var(--biru-muda) 100%);
+            color: var(--biru-tua);
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 13px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            border: 1px solid #bae6fd;
+            box-shadow: 0 2px 6px rgba(2, 132, 199, 0.08);
+            transition: var(--transisi);
+        }
+
+        .karakter-badge:hover {
+            transform: translateY(-2px);
+            background: var(--kuning-cerah);
+            color: #78350f;
+            border-color: #f59e0b;
+        }
+
+        /* HOBI & MINAT */
+        .hobi-grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 18px;
+            margin-top: 15px;
+        }
+
+        .hobi-item-card {
+            background: linear-gradient(180deg, #ffffff 0%, var(--biru-latar) 100%);
+            border: 2px solid #e0f2fe;
+            padding: 24px 18px;
+            text-align: center;
+            border-radius: var(--radius-lg);
+            transition: var(--transisi);
+            cursor: pointer;
+            position: relative;
+        }
+
+        .hobi-item-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--biru-primer);
+            box-shadow: 0 14px 25px -5px rgba(2, 132, 199, 0.2);
+            background: #ffffff;
+        }
+
+        .hobi-icon-circle {
+            font-size: 42px;
+            margin-bottom: 12px;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .hobi-item-card:hover .hobi-icon-circle {
+            transform: scale(1.18);
+        }
+
+        .hobi-title-text {
+            font-size: 17px;
+            font-weight: 800;
+            color: var(--biru-navy);
+            margin-bottom: 6px;
+        }
+
+        .hobi-desc-text {
+            font-size: 13px;
+            color: var(--teks-muted);
+            line-height: 1.5;
+        }
+
+        .hobi-featured-tag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: var(--kuning-cerah);
+            color: #78350f;
+            font-size: 10px;
+            font-weight: 800;
+            padding: 2px 8px;
+            border-radius: 12px;
+        }
+
+        /* AMBISI & BELAJAR CARD */
+        .ambisi-container {
+            margin-top: 24px;
+            background: linear-gradient(135deg, #f8fafc 0%, var(--biru-latar) 100%);
+            border-left: 6px solid var(--biru-primer);
+            border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+            padding: 22px 26px;
+            display: grid;
+            gap: 14px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
+
+        .ambisi-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            font-size: 15px;
+        }
+
+        .ambisi-badge {
+            background: var(--biru-tua);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .ambisi-badge.cita {
+            background: var(--aksen-kuning);
+            color: #451a03;
+        }
+
+        /* KEAHLIAN BARS */
+        .keahlian-container {
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+            margin-top: 15px;
+        }
+
+        .keahlian-row {
+            background: var(--biru-latar);
+            padding: 18px 22px;
+            border-radius: var(--radius-lg);
+            border: 1px solid #e2e8f0;
+            transition: var(--transisi);
+        }
+
+        .keahlian-row:hover {
+            border-color: var(--biru-primer);
+            background: #ffffff;
+            box-shadow: 0 6px 18px rgba(2, 132, 199, 0.1);
+        }
+
+        .keahlian-info-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .keahlian-nama {
+            font-weight: 800;
+            font-size: 16px;
+            color: var(--biru-navy);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .keahlian-badge-level {
+            font-size: 13px;
+            font-weight: 800;
+            padding: 4px 12px;
+            border-radius: 14px;
+        }
+
+        .level-html {
+            background: #e0f2fe;
+            color: #0369a1;
+        }
+
+        .level-gambar {
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        .level-js {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .progress-track {
+            background: #cbd5e1;
+            height: 18px;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            border-radius: 20px;
+            transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            background: linear-gradient(90deg, var(--biru-primer) 0%, #38bdf8 100%);
+        }
+
+        .progress-bar-fill.gambar {
+            background: linear-gradient(90deg, #10b981 0%, #34d399 100%);
+        }
+
+        .progress-bar-fill.javascript {
+            background: linear-gradient(90deg, #f59e0b 0%, var(--kuning-cerah) 100%);
+        }
+
+        /* PROYEK UNGGULAN */
+        .proyek-card-showcase {
+            background: linear-gradient(180deg, #ffffff 0%, #f7fdff 100%);
+            border: 2px solid #bae6fd;
+            border-radius: var(--radius-lg);
+            padding: 28px;
+            position: relative;
+            box-shadow: 0 8px 20px rgba(2, 132, 199, 0.08);
+        }
+
+        .proyek-header-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .proyek-tag-status {
+            background: #ecfdf5;
+            color: #065f46;
+            border: 1px solid #a7f3d0;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .proyek-title-text {
+            font-size: 22px;
+            color: var(--biru-navy);
+            font-weight: 800;
+        }
+
+        .proyek-desc-p {
+            font-size: 15px;
+            color: #475569;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .proyek-info-box-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 14px;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            padding: 16px;
+            border-radius: var(--radius-md);
+            margin-bottom: 22px;
+        }
+
+        .proyek-meta-cell span {
+            display: block;
+            font-size: 11px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--teks-muted);
+        }
+
+        .proyek-meta-cell strong {
+            font-size: 15px;
+            color: var(--teks-gelap);
+        }
+
+        .poster-mockup-banner {
+            background: linear-gradient(135deg, #059669 0%, #10b981 50%, #34d399 100%);
+            color: white;
+            padding: 25px 20px;
+            border-radius: var(--radius-md);
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(16, 185, 129, 0.25);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .poster-mockup-banner h4 {
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 6px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.15);
+        }
+
+        .poster-mockup-banner p {
+            font-size: 14px;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* PRESTASI */
+        .prestasi-card-box {
+            background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+            border: 2px solid #fde68a;
+            border-radius: var(--radius-lg);
+            padding: 26px;
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            box-shadow: 0 6px 18px rgba(245, 158, 11, 0.12);
+        }
+
+        .trophy-visual {
+            background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            box-shadow: 0 6px 16px rgba(217, 119, 6, 0.3);
+            flex-shrink: 0;
+            border: 3px solid white;
+        }
+
+        .prestasi-text-area h3 {
+            font-size: 21px;
+            font-weight: 800;
+            color: #92400e;
+            margin-bottom: 4px;
+        }
+
+        .prestasi-text-area p {
+            font-size: 15px;
+            color: #78350f;
+            line-height: 1.6;
+        }
+
+        /* INTERAKSI & KONTAK */
+        .kontak-card-box {
+            background: var(--biru-latar);
+            border: 2px dashed var(--biru-primer);
+            border-radius: var(--radius-lg);
+            padding: 32px 24px;
+            text-align: center;
+        }
+
+        .kontak-icon-big {
+            font-size: 46px;
+            margin-bottom: 12px;
+        }
+
+        .kontak-card-box h3 {
+            font-size: 22px;
+            color: var(--biru-navy);
+            margin-bottom: 8px;
+            font-weight: 800;
+        }
+
+        .kontak-desc-p {
+            font-size: 15px;
+            color: #334155;
+            max-width: 580px;
+            margin: 0 auto 20px;
+            line-height: 1.7;
+        }
+
+        .kontak-action-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .btn-action {
+            padding: 12px 26px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            border: none;
+            transition: var(--transisi);
+            text-decoration: none;
+        }
+
+        .btn-action-primary {
+            background: var(--biru-primer);
+            color: white;
+            box-shadow: 0 4px 15px rgba(2, 132, 199, 0.3);
+        }
+
+        .btn-action-primary:hover {
+            background: var(--biru-tua);
+            transform: translateY(-2px);
+        }
+
+        .btn-cheer {
+            background: linear-gradient(135deg, #ec4899 0%, #f43f5e 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(244, 63, 94, 0.3);
+        }
+
+        .btn-cheer:hover {
+            transform: translateY(-2px) scale(1.03);
+            box-shadow: 0 6px 20px rgba(244, 63, 94, 0.4);
+        }
+
+        /* MODAL POPUP FOR PHOTO */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal-box {
+            background: white;
+            max-width: 700px;
+            width: 100%;
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            position: relative;
+            animation: modalIn 0.3s ease;
+        }
+
+        @keyframes modalIn {
+            from { opacity: 0; transform: scale(0.92); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .modal-img {
+            width: 100%;
+            max-height: 520px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .modal-body {
+            padding: 20px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #ffffff;
+        }
+
+        .modal-info h4 {
+            font-size: 18px;
+            color: var(--biru-navy);
+            font-weight: 800;
+        }
+
+        .modal-info p {
+            font-size: 13px;
+            color: var(--teks-muted);
+        }
+
+        .modal-close-btn {
+            background: #f1f5f9;
+            border: none;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            font-size: 18px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #475569;
+            transition: var(--transisi);
+        }
+
+        .modal-close-btn:hover {
+            background: #e2e8f0;
+            color: #0f172a;
+        }
+
+        /* FOOTER */
+        footer {
+            background: linear-gradient(135deg, var(--biru-navy) 0%, #082f49 100%);
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+            font-size: 14px;
+        }
+
+        footer p {
+            opacity: 0.9;
+        }
+
+        footer .footer-sub {
+            font-size: 12px;
+            opacity: 0.7;
+            margin-top: 6px;
+        }
+
+        /* TOMBOL KEMBALI KE ATAS */
+        #btnTop {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: var(--biru-primer);
+            color: white;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: none;
+            font-size: 22px;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 18px rgba(2, 132, 199, 0.4);
+            transition: var(--transisi);
+            z-index: 99;
+        }
+
+        #btnTop:hover {
+            background: var(--biru-tua);
+            transform: translateY(-4px);
+        }
+
+        /* PRINT STYLING */
+        @media print {
+            nav, #btnTop, .hero-action-btns, .btn-cheer, .bubble, .foto-zoom-hint {
+                display: none !important;
+            }
+            body {
+                background: white;
+                color: black;
+            }
+            header {
+                box-shadow: none;
+                padding: 20px;
+            }
+            section {
+                box-shadow: none;
+                border: 1px solid #ccc;
+                page-break-inside: avoid;
+            }
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 860px) {
+            .tentang-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .foto-showcase-card {
+                max-width: 400px;
+                margin: 0 auto 10px;
+            }
+
+            header h1 {
+                font-size: 30px;
+            }
+
+            header .sub-nama {
+                font-size: 18px;
+            }
+
+            section {
+                padding: 24px;
+            }
+
+            .ambisi-item {
+                flex-direction: column;
+                gap: 4px;
+            }
+
+            .prestasi-card-box {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER / HERO -->
+    <header>
+        <div class="bubble bubble-1"></div>
+        <div class="bubble bubble-2"></div>
+        <div class="bubble bubble-3"></div>
+        <div class="bubble bubble-4"></div>
+
+        <div class="hero-profile">
+            <div class="avatar-ring" onclick="bukaModalFoto()" title="Klik untuk memperbesar foto">
+                <img src="avatar-dinan.png" 
+                     onerror="this.onerror=null; this.src='foto-dinan.png';" 
+                     alt="Avatar Dinan" 
+                     class="avatar-img">
+            </div>
+            <div class="badge-status">
+                <span class="badge-pulse"></span>
+                <span>Siswa Aktif</span>
+            </div>
+        </div>
+
+        <h1>Ferdinan Alfarubby</h1>
+        <div class="sub-nama">Portofolio Dinan — Kelas 8.1</div>
+
+        <div class="chips-header">
+            <span class="header-chip">🏫 MTsN 01 Payakumbuh</span>
+            <span class="header-chip">📍 Payakumbuh, Sumatera Barat</span>
+            <span class="header-chip">🚀 Calon Pengusaha Teknologi</span>
+        </div>
+
+        <div class="hero-action-btns">
+            <a href="#tentang" class="btn-hero btn-hero-primary">👤 Jelajahi Profil</a>
+            <a href="#hobi" class="btn-hero btn-hero-secondary">🎱 Lihat Foto & Hobi</a>
+            <button onclick="window.print()" class="btn-hero btn-hero-secondary">🖨️ Cetak / PDF</button>
+        </div>
+    </header>
+
+    <!-- NAVIGASI CEPAT -->
+    <nav>
+        <a href="#tentang">👤 Tentang</a>
+        <a href="#hobi">🎮 Hobi & Minat</a>
+        <a href="#keahlian">💡 Keahlian</a>
+        <a href="#proyek">🎨 Proyek</a>
+        <a href="#prestasi">🏆 Prestasi</a>
+        <a href="#kontak">📩 Kontak</a>
+    </nav>
+
+    <!-- KONTEN UTAMA -->
+    <main>
+
+        <!-- SECTION: TENTANG SAYA -->
+        <section id="tentang">
+            <div class="section-header">
+                <div class="section-icon">👋</div>
+                <h2>Tentang Saya</h2>
+            </div>
+
+            <div class="tentang-wrapper">
+                <!-- KOTAK FOTO DINAN (ENHANCED) -->
+                <div class="foto-showcase-card">
+                    <div class="foto-img-container" onclick="bukaModalFoto()" title="Klik untuk melihat foto resolusi penuh">
+                        <img src="foto-dinan.png" 
+                             onerror="this.onerror=null; this.src='Screenshot 2026-09-29 074910.png';" 
+                             alt="Ferdinan Alfarubby (Dinan) Bermain Biliar" 
+                             class="foto-dinan-img">
+                        <div class="foto-overlay-tag">
+                            <span>🎱 Fokus & Presisi</span>
+                        </div>
+                        <div class="foto-zoom-hint">🔍 Klik perbesar</div>
+                    </div>
+                    <div class="foto-caption-box">
+                        <div class="foto-caption-title">Ferdinan Alfarubby (Dinan)</div>
+                        <div class="foto-caption-desc">Aktivitas olahraga biliar melatih ketenangan mental, fokus target, dan perhitungan strategi presisi.</div>
+                    </div>
+                </div>
+
+                <!-- DESKRIPSI & BIODATA -->
+                <div class="tentang-detail-area">
+                    <p class="tentang-intro-text">
+                        Halo semuanya! Nama saya <b>Ferdinan Alfarubby</b>, biasa akrab disapa <b>Dinan</b>. 
+                        Saya adalah siswa kelas 8.1 di <b>MTsN 01 Payakumbuh</b> yang sangat gemar dengan dunia teknologi, komputasi, dan olahraga strategi. 
+                        Saya bersemangat untuk terus mencoba hal-hal baru, mengasah kemampuan logika serta kreativitas demi masa depan yang gemilang.
+                    </p>
+
+                    <div class="info-pribadi-grid">
+                        <div class="info-card-item">
+                            <div class="info-icon-badge">🏫</div>
+                            <div>
+                                <div class="info-label">Madrasah / Sekolah</div>
+                                <div class="info-val">MTsN 01 Payakumbuh</div>
+                            </div>
+                        </div>
+
+                        <div class="info-card-item">
+                            <div class="info-icon-badge">📚</div>
+                            <div>
+                                <div class="info-label">Tingkat Kelas</div>
+                                <div class="info-val">Kelas 8.1</div>
+                            </div>
+                        </div>
+
+                        <div class="info-card-item">
+                            <div class="info-icon-badge">📍</div>
+                            <div>
+                                <div class="info-label">Kota Asal</div>
+                                <div class="info-val">Payakumbuh, Sumbar</div>
+                            </div>
+                        </div>
+
+                        <div class="info-card-item">
+                            <div class="info-icon-badge">🎯</div>
+                            <div>
+                                <div class="info-label">Motto Diri</div>
+                                <div class="info-val">Fokus & Pantang Menyerah</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="karakter-container">
+                        <div class="karakter-title">
+                            <span>⭐ Karakter & Prinsip Diri:</span>
+                        </div>
+                        <div class="badge-list">
+                            <span class="karakter-badge">🔍 <b>Penasaran</b> — Rasa ingin tahu tinggi untuk hal baru</span>
+                            <span class="karakter-badge">🤝 <b>Amanah</b> — Bertanggung jawab atas tugas yang diemban</span>
+                            <span class="karakter-badge">✨ <b>Baik Hati</b> — Ramah dan senang bekerja sama</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: HOBI & MINAT -->
+        <section id="hobi">
+            <div class="section-header">
+                <div class="section-icon">🎯</div>
+                <h2>Hobi & Minat</h2>
+            </div>
+
+            <div class="hobi-grid-cards">
+                <!-- Hobi 1: Digital -->
+                <div class="hobi-item-card">
+                    <span class="hobi-icon-circle">💻</span>
+                    <div class="hobi-title-text">Dunia Digital</div>
+                    <p class="hobi-desc-text">Mempelajari kode HTML, logika web, dan antusias dengan perkembangan teknologi komputer.</p>
+                </div>
+
+                <!-- Hobi 2: Biliar (Sesuai Foto) -->
+                <div class="hobi-item-card" style="border-color: #38bdf8;">
+                    <span class="hobi-featured-tag">Favorit</span>
+                    <span class="hobi-icon-circle">🎱</span>
+                    <div class="hobi-title-text">Olahraga Biliar</div>
+                    <p class="hobi-desc-text">Melatih daya konsentrasi penuh, perhitungan sudut tembakan, ketenangan, dan strategi.</p>
+                </div>
+
+                <!-- Hobi 3: Sepak Bola -->
+                <div class="hobi-item-card">
+                    <span class="hobi-icon-circle">⚽</span>
+                    <div class="hobi-title-text">Sepak Bola</div>
+                    <p class="hobi-desc-text">Menjaga kebugaran jasmani, melatih kekompakan tim, dan semangat sportivitas di lapangan.</p>
+                </div>
+
+                <!-- Hobi 4: Gaming -->
+                <div class="hobi-item-card">
+                    <span class="hobi-icon-circle">🎮</span>
+                    <div class="hobi-title-text">Bermain Game</div>
+                    <p class="hobi-desc-text">Sarana hiburan positif, melatih koordinasi respon cepat, dan memecahkan tantangan taktis.</p>
+                </div>
+            </div>
+
+            <!-- Target Belajar & Cita-cita -->
+            <div class="ambisi-container">
+                <div class="ambisi-item">
+                    <span class="ambisi-badge">📖 Sedang Dipelajari</span>
+                    <span>Membuat Formulir <b>BRIEF-SISWA</b> serta menguasai dasar-dasar rancang bangun halaman web (HTML, CSS, dan dasar JavaScript).</span>
+                </div>
+                <div class="ambisi-item">
+                    <span class="ambisi-badge cita">🚀 Cita-cita Besar</span>
+                    <span>Menjadi seorang <b>pengusaha sukses</b> yang mampu memanfaatkan teknologi digital untuk membuka lapangan usaha dan memberi manfaat luas.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: KEAHLIAN -->
+        <section id="keahlian">
+            <div class="section-header">
+                <div class="section-icon">💡</div>
+                <h2>Keahlian & Kemampuan</h2>
+            </div>
+
+            <div class="keahlian-container">
+
+                <!-- Menggambar -->
+                <div class="keahlian-row">
+                    <div class="keahlian-info-top">
+                        <span class="keahlian-nama">🎨 Menggambar & Visualisasi Kreatif</span>
+                        <span class="keahlian-badge-level level-gambar">Mahir (90%)</span>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-bar-fill gambar" style="width: 90%;"></div>
+                    </div>
+                </div>
+
+                <!-- HTML -->
+                <div class="keahlian-row">
+                    <div class="keahlian-info-top">
+                        <span class="keahlian-nama">🌐 Bahasa Pemrograman HTML</span>
+                        <span class="keahlian-badge-level level-html">Bisa Sendiri (70%)</span>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-bar-fill" style="width: 70%;"></div>
+                    </div>
+                </div>
+
+                <!-- JavaScript -->
+                <div class="keahlian-row">
+                    <div class="keahlian-info-top">
+                        <span class="keahlian-nama">⚡ Logika JavaScript & Interaktivitas</span>
+                        <span class="keahlian-badge-level level-js">Baru Mulai (30%)</span>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-bar-fill javascript" style="width: 30%;"></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION: PROYEK SAYA -->
+        <section id="proyek">
+            <div class="section-header">
+                <div class="section-icon">🎨</div>
+                <h2>Proyek Unggulan</h2>
+            </div>
+
+            <div class="proyek-card-showcase">
+                <div class="proyek-header-area">
+                    <h3 class="proyek-title-text">Poster Edukasi Lingkungan Madrasah</h3>
+                    <span class="proyek-tag-status">🌿 Inisiatif Lingkungan</span>
+                </div>
+
+                <p class="proyek-desc-p">
+                    Sebuah karya desain poster digital yang dibuat sebagai bentuk kepedulian terhadap lingkungan sekolah. 
+                    Poster ini mengampanyekan pentingnya aksi memilah sampah plastik secara benar demi menjaga kebersihan, kesehatan, dan kenyamanan seluruh warga madrasah.
+                </p>
+
+                <div class="proyek-info-box-grid">
+                    <div class="proyek-meta-cell">
+                        <span>📅 Tanggal Pembuatan</span>
+                        <strong>Mei 2026</strong>
+                    </div>
+                    <div class="proyek-meta-cell">
+                        <span>👤 Peran Pengerjaan</span>
+                        <strong>Mandiri (Desain Sendiri)</strong>
+                    </div>
+                    <div class="proyek-meta-cell">
+                        <span>📝 Kategori Proyek</span>
+                        <strong>Latihan Desain & Edukasi Sosial</strong>
+                    </div>
+                </div>
+
+                <div class="poster-mockup-banner">
+                    <h4>🌱 "Pilah Sampah Plastik, Selamatkan Madrasah Kita"</h4>
+                    <p>Kampanye budaya ramah lingkungan siswa MTsN 01 Payakumbuh untuk bumi yang lebih hijau dan bersih.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: PRESTASI -->
+        <section id="prestasi">
+            <div class="section-header">
+                <div class="section-icon">🏆</div>
+                <h2>Prestasi Akademik</h2>
+            </div>
+
+            <div class="prestasi-card-box">
+                <div class="trophy-visual">🥉</div>
+                <div class="prestasi-text-area">
+                    <h3>Peringkat / Ranking 3 Kelas</h3>
+                    <p>
+                        Berhasil meraih prestasi gemilang peringkat 3 terbaik di kelas pada tahun 2020. 
+                        Prestasi ini mencerminkan semangat belajar yang tekun, konsisten, dan siap untuk terus ditingkatkan ke jenjang yang lebih tinggi.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: KONTAK & INTERAKSI -->
+        <section id="kontak">
+            <div class="section-header">
+                <div class="section-icon">📩</div>
+                <h2>Pusat Kontak & Komunikasi</h2>
+            </div>
+
+            <div class="kontak-card-box">
+                <div class="kontak-icon-big">🏫</div>
+                <h3>Hubungi Ferdinan Alfarubby</h3>
+                <p class="kontak-desc-p">
+                    Sebagai siswa aktif di MTsN 01 Payakumbuh, seluruh komunikasi resmi terkait kegiatan belajar, tugas sekolah, atau kerjasama dapat dikoordinasikan melalui pihak sekolah dan guru pembimbing.
+                </p>
+                <div style="font-size: 16px; font-weight: 800; color: var(--biru-primer); margin-bottom: 22px;">
+                    📍 MTsN 01 Payakumbuh, Sumatera Barat
+                </div>
+
+                <div class="kontak-action-buttons">
+                    <button class="btn-action btn-action-primary" onclick="alert('Alamat: MTsN 01 Payakumbuh, Sumatera Barat. Silakan temui guru pembimbing atau wali kelas untuk keperluan resmi.')">
+                        📍 Informasi Madrasah
+                    </button>
+                    <button class="btn-action btn-cheer" id="btnBeriSemangat" onclick="tambahSemangat()">
+                        👏 Beri Semangat untuk Dinan! (<span id="cheerCount">1</span>)
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- MODAL POPUP PREVIEW FOTO -->
+    <div class="modal-overlay" id="modalFoto" onclick="tutupModalFoto(event)">
+        <div class="modal-box" onclick="event.stopPropagation()">
+            <img src="foto-dinan.png" 
+                 onerror="this.onerror=null; this.src='Screenshot 2026-09-29 074910.png';" 
+                 alt="Foto Ferdinan Alfarubby (Dinan) Bermain Biliar" 
+                 class="modal-img">
+            <div class="modal-body">
+                <div class="modal-info">
+                    <h4>Ferdinan Alfarubby (Dinan)</h4>
+                    <p>Olahraga Biliar • Melatih Konsentrasi, Presisi & Ketenangan</p>
+                </div>
+                <button class="modal-close-btn" onclick="tutupModalFotoLangsung()" title="Tutup">✕</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOMBOL KEMBALI KE ATAS -->
+    <button id="btnTop" title="Kembali ke atas">↑</button>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 <b>Ferdinan Alfarubby (Dinan)</b> — Siswa MTsN 01 Payakumbuh</p>
+        <div class="footer-sub">Portofolio Digital Siswa • HTML & CSS Murni • Ceria & Inspiratif</div>
+    </footer>
+
+    <!-- INTERAKSI JAVASCRIPT -->
+    <script>
+        // Tombol Kembali ke Atas
+        const btnTop = document.getElementById("btnTop");
+
+        window.onscroll = function() {
+            if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+                btnTop.style.display = "flex";
+            } else {
+                btnTop.style.display = "none";
+            }
+        };
+
+        btnTop.addEventListener("click", function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+
+        // Modal Foto
+        function bukaModalFoto() {
+            document.getElementById("modalFoto").classList.add("active");
+        }
+
+        function tutupModalFoto(e) {
+            if (e.target.id === "modalFoto") {
+                document.getElementById("modalFoto").classList.remove("active");
+            }
+        }
+
+        function tutupModalFotoLangsung() {
+            document.getElementById("modalFoto").classList.remove("active");
+        }
+
+        // Tombol Beri Semangat
+        let jumlahSemangat = 1;
+        function tambahSemangat() {
+            jumlahSemangat++;
+            document.getElementById("cheerCount").innerText = jumlahSemangat;
+            alert("Terima kasih banyak atas dukungannya untuk Dinan! 🎉 Semangat belajar terus membara!");
+        }
+    </script>
+</body>
+</html>
